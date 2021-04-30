@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Survey</title>
+</head>
+<body>
+     <h1>This is the form</h1>
+     <h2>Register Here:</h2>
+     <form action="/add-user" method="post">
+          {% csrf_token %}
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
+         
+
+          <label for="loc">Dojo Location:</label>
+          <select name="loc" id="">
+               <option value="Seattle">Seattle</option>
+               <option value="San francisco">San Francisco</option>
+               <option value="Portland">Portland</option>
+               <option value="Kent">Kent</option>
+          </select><br><br>
+          <!-- radio button -->
+          <label for="type">Type:</label><br><br>
+          <input type="radio" id="Full_time" name="type" value="Full-time">
+          <label for="Full_time">Full-time</label><br>
+          <input type="radio" id="Part_time" name="type" value="Part-time">
+          <label for="Part_time">Part-time</label><br><br>
+          <!-- check box  -->
+          <label for= "campus" class="container">Online Learning
+               <input type="checkbox"  name= "campus" value = "Online Learning">
+               <span class="checkmark"></span>
+          </label><br><br>
+          <label for= "campus" class="container">Campus Learning
+               <input type="checkbox"  name="campus" value="Campus Learning">
+               <span class="checkmark"></span>
+          </label><br><br>
+          <input type="submit" value="Submit">
+        </form>
+</body>
+</html>
